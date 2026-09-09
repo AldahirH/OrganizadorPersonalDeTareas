@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+body {
+    padding: 2%;
+    font-family: Arial, sans-serif;
+    background-color: #F6F7FB;
+}
+
+/* Parte Superior del Contenedor */
+.ContenedorPrincipal{
+    padding: 2%;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+}
+
+.ContenedorTituloAplicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContenedorTitulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ContenedorPendientes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    
+}
+
+.Pendientes{
+    width: 30%;
+    height: 50%;
+}
+/* Parte Superior del Contenedor */
+
