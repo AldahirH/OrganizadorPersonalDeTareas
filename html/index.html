@@ -15,30 +15,54 @@
 
         <div class="ContenedorPendientes">
             <div class="CotenedorTotalTareas">
-
+                <img src="" alt="SimboloTotalTareasPendientes">
+                <h2>Total</h2>
+                <h1>6</h1>
             </div>
             <div class="ContenedorTareasPendientes">
-
+                <img src="" alt="SimboloPendientesTareasPendientes">
+                <h2>Pendientes</h2>
+                <h1>4</h1>
             </div>
             <div class="ContenedorTareasCompletadas">
-
+                <img src="" alt="SimboloCompletadasTareasCompletadas">
+                <h2>Completadas</h2>
+                <h1>2</h1>
             </div>
         </div>
 
         <div class="ContenedorAgregarTarea">
             <h2>Nueva Tarea</h2>
-            <div class="ContenedorAgregarTareaFormularios">
+            <div class="ContenedorDefinirTareaFormularios">
+                <label for="tarea">Título</label>
+                <input type="text" id="tarea" placeholder="¿Qué deseas hacer?">
+                <label for="date">Fecha Límite</label>
+                <input type="date" id="date">
                 <button><img src="" alt="SimboloAgregar">Agregar Tarea</button>
             </div>
         </div>
         
         <div class="ContenedorMisTareas">
             <div class="ContenedorFiltros">
-
+                <div class="contenedorFiltroBusqueda">
+                    <img src="" alt="LupaBusqueda">
+                    <input type="text" placeholder="Buscar tareas...">
+                </div>
+                <div class="ContenedorFiltrosTareas">
+                    <button>Todos</button>
+                    <button>Pendientes</button>
+                    <button>Completadas</button>
+                </div>
             </div>
 
             <div class="ContenedorTareas">
-
+                <div class="Tarea">
+                    <input type="checkbox">
+                    <label for="Tarea">Practicar Flexbox</label>
+                    <p class="fecha-limite">10 Sep</p>
+                    <button><img src="" alt="SimboloEditar"></button>
+                    <button><img src="" alt="SimboloEliminar"></button>
+                </div>
             </div>
         </div>
     </div>
