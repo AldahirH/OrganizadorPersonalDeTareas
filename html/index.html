@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,78 +7,202 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="ContenedorPrincipal">
-        <div class="ContenedorTituloAplicacion">
+    <main class="ContenedorPrincipal">
+        <header class="ContenedorTituloAplicacion">
             <div class="ContenedorTitulo">
             <img src="" alt="checkbox">
             <h1>Mis Tareas</h1>
             </div>
-            <h3>Organiza tu día, una tarea a la vez.</h3>
-        </div>
+            <p class="SubtituloAplicacion">Organiza tu día, una tarea a la vez.</p>
+        </header>
 
         <div class="ContenedorPendientes">
-            <div class="CotenedorTotalTareas Pendientes">
+            <div class="ContenedorTotalTareas Pendientes">
                 <img src="" alt="SimboloTotalTareasPendientes">
                 <div class="TextoPendientes">
                     <h2>Total</h2>
-                    <h1>6</h1>
+                    <p class="CantidadTareas">6</p>
                 </div>
             </div>
             <div class="ContenedorTareasPendientes Pendientes">
                 <img src="" alt="SimboloPendientesTareasPendientes">
                 <div class="TextoPendientes">
                     <h2>Pendientes</h2>
-                    <h1>4</h1>
+                    <p class="CantidadTareas">4</p>
                 </div>
             </div>
             <div class="ContenedorTareasCompletadas Pendientes">
                 <img src="" alt="SimboloCompletadasTareasCompletadas">
                 <div class="TextoPendientes">
                     <h2>Completadas</h2>
-                    <h1>2</h1>
+                    <p class="CantidadTareas">2</p>
                 </div>
             </div>
         </div>
 
         <div class="ContenedorAgregarTarea">
             <h2>Nueva Tarea</h2>
-            <div class="ContenedorDefinirTarea">
-                <div class="ContendorFormularioTitulo ContenedorFormulario">
+            <form class="ContenedorDefinirTarea">
+                <div class="ContenedorFormularioTitulo ContenedorFormulario">
                     <label for="tarea">Título</label>
-                    <input type="text" id="tarea" placeholder="¿Qué deseas hacer?">
+                    <input type="text" id="tarea" name="titulo" placeholder="¿Qué deseas hacer?">
                 </div>
-                <div class="ContendorFormularioFecha ContenedorFormulario">
+                <div class="ContenedorFormularioFecha ContenedorFormulario">
                     <label for="date">Fecha Límite</label>
-                    <input type="date" id="date">
+                    <input type="date" id="date" name="fecha">
                 </div>
-                <button><img src="" alt="SimboloAgregar">Agregar Tarea</button>
-            </div>
+                <button type="submit"><img src="" alt="SimboloAgregar">Agregar Tarea</button>
+            </form>
         </div>
         
         <div class="ContenedorMisTareas">
             <div class="ContenedorFiltros">
                 <div class="contenedorFiltroBusqueda">
                     <img src="" alt="LupaBusqueda">
-                    <input type="text" placeholder="Buscar tareas...">
+                    <label for="buscar-tareas" class="SoloLectoresPantalla">Buscar tareas</label>
+                    <input type="text" id="buscar-tareas" placeholder="Buscar tareas...">
                 </div>
                 <div class="ContenedorFiltrosTareas">
-                    <button>Todos</button>
-                    <button>Pendientes</button>
-                    <button>Completadas</button>
+                    <button type="button">Todos</button>
+                    <button type="button">Pendientes</button>
+                    <button type="button">Completadas</button>
                 </div>
             </div>
 
             <div class="ContenedorTareas">
                 <div class="Tarea">
-                    <input type="checkbox">
-                    <label for="Tarea">Practicar Flexbox</label>
-                    <p class="fecha-limite">10 Sep</p>
-                    <button><img src="" alt="SimboloEditar"></button>
-                    <button><img src="" alt="SimboloEliminar"></button>
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-1">
+                        <label for="tarea-1">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-2">
+                        <label for="tarea-2">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-3">
+                        <label for="tarea-3">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-4">
+                        <label for="tarea-4">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-5">
+                        <label for="tarea-5">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-6">
+                        <label for="tarea-6">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-7">
+                        <label for="tarea-7">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-8">
+                        <label for="tarea-8">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-9">
+                        <label for="tarea-9">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
+                </div>
+                <div class="Tarea">
+                    <div class="TareaCheckboxDescripcion">
+                        <input type="checkbox" id="tarea-10">
+                        <label for="tarea-10">Practicar Flexbox</label>
+                    </div>
+                    <div class="TareaFechaLimite">
+                        <p class="fecha-limite">10 Sep</p>
+                    </div>
+                    <div class="TareaAcciones">
+                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
+                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
