@@ -1,3 +1,30 @@
+:root{
+    --color-fondo: #F6F7FB;
+    --color-tarjetas: #FFFFFF;
+    --color-principal: #4F46E5;
+    --color-texto: #172033;
+    --color-borde: #E0E0E0;
+    --fuente-principal: Arial, sans-serif;
+    --espacio-pequeno: 10px;
+    --espacio-mediano: 16px;
+    --espacio-grande: 20px;
+    --espacio-seccion: 30px;
+    --padding-contenedor: 2%;
+    --radio-contenedor: 12px;
+    --color-texto-secundario: #596582;
+    --color-principal-hover: #4338CA;
+    --color-filtro: #EEF1F8;
+    --color-eliminar: #DC2626;
+    --color-eliminar-fondo: #FEE2E2;
+    --color-hoy: #92400E;
+    --color-hoy-fondo: #FEF3C7;
+    --radio-control: 8px;
+    --alto-control: 44px;
+    --tamano-icono: 24px;
+    --ancho-contenido: 1100px;
+    --color-completadas: #16A34A;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,37 +32,146 @@
 }
 
 body {
-    padding: 2%;
-    font-family: Arial, sans-serif;
-    background-color: #F6F7FB;
+    padding: var(--padding-contenedor);
+    font-family: var(--fuente-principal);
+    background-color: var(--color-principal);
     min-height: 100vh;
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* Base compartida de controles e iconos. */
+button,
+input {
+    font: inherit;
+}
+
+svg {
+    width: var(--tamano-icono);
+    height: var(--tamano-icono);
+    flex-shrink: 0;
+}
+
+:where(button, input):focus-visible {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+.CampoFormulario {
+    width: 100%;
+    min-width: 0;
+    min-height: var(--alto-control);
+    padding: var(--espacio-pequeno);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-control);
+    color: var(--color-texto);
+    background-color: var(--color-tarjetas);
+}
+
+.CampoFormulario::placeholder {
+    color: var(--color-texto-secundario);
+    opacity: 1;
+}
+
+.Boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacio-pequeno);
+    min-height: var(--alto-control);
+    padding: var(--espacio-pequeno);
+    border: 1px solid transparent;
+    border-radius: var(--radio-control);
+    background-color: var(--color-filtro);
+    color: var(--color-texto-secundario);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.Boton:hover {
+    background-color: var(--color-borde);
+}
+
+.BotonAgregarTarea,
+.BotonSeleccionado {
+    background-color: var(--color-principal);
+    color: var(--color-tarjetas);
+}
+
+.BotonAgregarTarea:hover,
+.BotonSeleccionado:hover {
+    background-color: var(--color-principal-hover);
+}
+
+.BotonIcono {
+    width: var(--alto-control);
+    padding: 0;
+    background-color: transparent;
+}
+
+.BotonEliminar {
+    color: var(--color-eliminar);
+}
+
+.BotonEliminar:hover {
+    background-color: var(--color-eliminar-fondo);
+}
+
+.ImagenTitulo {
+    box-sizing: content-box;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: var(--color-principal);
+    color: var(--color-tarjetas);
+}
+
+.Icono {
+    width: 40px;
+    height: 40px;
+}
+
+.IconoPendientes {
+    color: var(--color-hoy);
+}
+
+.IconoCompletadas {
+    color: var(--color-completadas);
+}
+
+.IconoTotal {
+    color: var(--color-principal);
 }
 
 /* Parte Superior del Contenedor */
 .ContenedorPrincipal{
-    padding: 2%;
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
-    border-radius: 12px;
+    max-width: var(--ancho-contenido);
+    margin-inline: auto;
+    padding: var(--padding-contenedor);
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-contenedor);
 }
 
 .ContenedorTituloAplicacion{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .ContenedorTitulo{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: var(--espacio-pequeno);
 }
 
-/* Conserva el tamaño anterior al cambiar los encabezados por párrafos. */
 .SubtituloAplicacion{
     font-size: 1.17em;
-    font-weight: bold;
+    color: var(--color-texto-secundario);
 }
 
 .CantidadTareas{
@@ -46,17 +182,30 @@ body {
 .ContenedorPendientes{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    align-items: center;
-    margin: 30px 0px 30px 0px;
+    gap: var(--espacio-seccion);
+    align-items: stretch;
+    margin: var(--espacio-seccion) 0px var(--espacio-seccion) 0px;
 }
 
-.Pendientes{
+.TarjetaResumen{
     display: flex;
     flex-direction: row;
-    gap: 10%;
+    align-items: center;
+    gap: var(--espacio-mediano);
     min-width: 0;
-    padding: 10px;
+    padding: var(--espacio-pequeno);
+    background-color: var(--color-tarjetas);
+    border-radius: var(--radio-contenedor);
+}
+
+.TextoResumen {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.TextoResumen h2 {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
 }
 /* Parte Superior del Contenedor */
 
@@ -64,21 +213,25 @@ body {
 .ContenedorAgregarTarea{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 30px 0px 30px 0px;
+    gap: var(--espacio-pequeno);
+    margin: var(--espacio-seccion) 0px var(--espacio-seccion) 0px;
+    padding: var(--espacio-mediano);
+    border-radius: var(--radio-contenedor);
+    background-color: var(--color-tarjetas);
 }
 
 .ContenedorDefinirTarea{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .ContenedorFormulario{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
     min-width: 0;
 }
 
@@ -90,7 +243,7 @@ body {
     flex: 7 1 0;
 }
 
-.ContenedorDefinirTarea > button{
+.BotonAgregarTarea{
     flex: 0 0 auto;
 }
 
@@ -112,23 +265,49 @@ body {
 .ContenedorMisTareas{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 20px 0px 20px 0px;
+    gap: var(--espacio-pequeno);
+    margin: var(--espacio-grande) 0px var(--espacio-grande) 0px;
+    background-color: var(--color-tarjetas);
+    padding: var(--espacio-mediano);
+    border-radius: var(--radio-contenedor);
 }
 
 .ContenedorFiltros{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
     justify-content: space-between;
-    height: 50px;
+    flex-wrap: wrap;
+}
+
+.ContenedorFiltroBusqueda {
+    position: relative;
+    flex: 1 1 240px;
+    min-width: 0;
+}
+
+.ContenedorFiltroBusqueda svg {
+    position: absolute;
+    left: var(--espacio-pequeno);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-texto-secundario);
+    pointer-events: none;
+}
+
+.ContenedorFiltroBusqueda .CampoFormulario {
+    padding-left: calc(var(--tamano-icono) + 2 * var(--espacio-pequeno));
 }
 
 .ContenedorFiltrosTareas{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
+}
+
+.BotonFiltroTareas{
+    flex: 1;
 }
 
 .ContenedorTareas{
@@ -140,18 +319,24 @@ body {
 .Tarea{
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    padding: 10px;
+    gap: var(--espacio-pequeno);
+    padding: var(--espacio-pequeno);
     justify-content: space-between;
-    border: 1px solid #E0E0E0;
+    align-items: center;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.Tarea:first-child {
+    border-top: 1px solid var(--color-borde);
 }
 
 .TareaCheckboxDescripcion{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
     flex: 1;
     min-width: 0;
+    align-items: center;
 }
 
 .TareaCheckboxDescripcion label{
@@ -160,13 +345,35 @@ body {
 
 .TareaCheckboxDescripcion input{
     flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-principal);
+    cursor: pointer;
+}
+
+.TareaCheckboxDescripcion input:checked + label {
+    color: var(--color-texto-secundario);
+    text-decoration: line-through;
+}
+
+.FechaLimite {
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.FechaHoy {
+    padding: 2px 8px;
+    border-radius: var(--radio-control);
+    color: var(--color-hoy);
+    background-color: var(--color-hoy-fondo);
+    font-weight: 600;
 }
 
 .TareaFechaLimite{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: var(--espacio-pequeno);
     flex: 0 0 auto;
     white-space: nowrap;
 }
@@ -175,7 +382,106 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: var(--espacio-grande);
     flex: 0 0 auto;
 }
 /* Parte Inferior del Contenedor */
+
+/* En pantallas intermedias, el formulario y la barra de filtros se apilan. */
+@media (max-width: 800px) {
+    .ContenedorDefinirTarea,
+    .ContenedorFiltros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ContenedorFormularioTitulo,
+    .ContenedorFormularioFecha,
+    .ContenedorFiltroBusqueda {
+        flex: 0 1 auto;
+    }
+
+    .BotonAgregarTarea {
+        width: 100%;
+    }
+}
+
+/* Las tres tarjetas permanecen en una fila, con su contenido en columna. */
+@media (max-width: 600px) {
+    body {
+        padding: var(--espacio-pequeno);
+    }
+
+    .ContenedorPrincipal {
+        padding: var(--espacio-pequeno);
+    }
+
+    .ContenedorPendientes {
+        gap: var(--espacio-pequeno);
+        margin-block: var(--espacio-grande);
+    }
+
+    .TarjetaResumen {
+        flex-direction: column;
+        gap: var(--espacio-pequeno);
+        padding: var(--espacio-pequeno) 4px;
+        text-align: center;
+    }
+
+    .TextoResumen h2,
+    .BotonFiltroTareas {
+        font-size: 0.75rem;
+    }
+
+    .CantidadTareas {
+        font-size: 1.5rem;
+    }
+
+    .SubtituloAplicacion {
+        font-size: 1rem;
+    }
+
+    .ImagenTitulo {
+        width: 24px;
+        height: 24px;
+        padding: 6px;
+        border-radius: 9px;
+    }
+
+    .ContenedorAgregarTarea,
+    .ContenedorMisTareas {
+        padding: var(--espacio-pequeno);
+    }
+
+    .ContenedorFiltrosTareas {
+        gap: 4px;
+    }
+
+    .BotonFiltroTareas {
+        padding-inline: 4px;
+        min-width: 0;
+    }
+
+    .Tarea {
+        gap: 6px;
+        padding-inline: 0;
+    }
+
+    .TareaCheckboxDescripcion {
+        gap: 6px;
+        font-size: 0.875rem;
+    }
+
+    .TareaAcciones {
+        gap: 0;
+    }
+
+    .BotonIcono {
+        width: 32px;
+    }
+
+    .BotonIcono svg {
+        width: 20px;
+        height: 20px;
+    }
+}

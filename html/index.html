@@ -10,30 +10,82 @@
     <main class="ContenedorPrincipal">
         <header class="ContenedorTituloAplicacion">
             <div class="ContenedorTitulo">
-            <img src="" alt="checkbox">
-            <h1>Mis Tareas</h1>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-square-check ImagenTitulo"
+                    aria-hidden="true">
+                    <path d="m16 9-5.5 5.5L8 12"/>
+                </svg>
+                <h1>Mis Tareas</h1>
             </div>
             <p class="SubtituloAplicacion">Organiza tu día, una tarea a la vez.</p>
         </header>
 
         <div class="ContenedorPendientes">
-            <div class="ContenedorTotalTareas Pendientes">
-                <img src="" alt="SimboloTotalTareasPendientes">
-                <div class="TextoPendientes">
+            <div class="ContenedorTotalTareas TarjetaResumen">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="lucide lucide-clipboard-list Icono IconoTotal">
+                    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                    <path d="M12 11h4"/>
+                    <path d="M12 16h4"/>
+                    <path d="M8 11h.01"/>
+                    <path d="M8 16h.01"/>
+                </svg>
+                <div class="TextoResumen">
                     <h2>Total</h2>
-                    <p class="CantidadTareas">6</p>
+                    <p class="CantidadTareas">7</p>
                 </div>
             </div>
-            <div class="ContenedorTareasPendientes Pendientes">
-                <img src="" alt="SimboloPendientesTareasPendientes">
-                <div class="TextoPendientes">
+            <div class="ContenedorTareasPendientes TarjetaResumen">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="lucide lucide-clock Icono IconoPendientes">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <div class="TextoResumen">
                     <h2>Pendientes</h2>
-                    <p class="CantidadTareas">4</p>
+                    <p class="CantidadTareas">5</p>
                 </div>
             </div>
-            <div class="ContenedorTareasCompletadas Pendientes">
-                <img src="" alt="SimboloCompletadasTareasCompletadas">
-                <div class="TextoPendientes">
+            <div class="ContenedorTareasCompletadas TarjetaResumen">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="lucide lucide-circle-check Icono IconoCompletadas">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m16 9-5.5 5.5L8 12"/>
+                </svg>
+                <div class="TextoResumen">
                     <h2>Completadas</h2>
                     <p class="CantidadTareas">2</p>
                 </div>
@@ -45,30 +97,61 @@
             <form class="ContenedorDefinirTarea">
                 <div class="ContenedorFormularioTitulo ContenedorFormulario">
                     <label for="tarea">Título</label>
-                    <input type="text" id="tarea" name="titulo" placeholder="¿Qué deseas hacer?">
+                    <input type="text" class="CampoFormulario" id="tarea" name="titulo" placeholder="¿Qué deseas hacer?">
                 </div>
                 <div class="ContenedorFormularioFecha ContenedorFormulario">
                     <label for="date">Fecha Límite</label>
-                    <input type="date" id="date" name="fecha">
+                    <input type="date" class="CampoFormulario" id="date" name="fecha">
                 </div>
-                <button type="submit"><img src="" alt="SimboloAgregar">Agregar Tarea</button>
+                <button type="button" class="Boton BotonAgregarTarea">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" 
+                        height="24" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        class="lucide lucide-plus">
+                        <path d="M5 12h14"/>
+                        <path d="M12 5v14"/>
+                    </svg>
+                    Agregar tarea
+                </button>
             </form>
         </div>
         
         <div class="ContenedorMisTareas">
             <div class="ContenedorFiltros">
-                <div class="contenedorFiltroBusqueda">
-                    <img src="" alt="LupaBusqueda">
+                <div class="ContenedorFiltroBusqueda">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" 
+                        height="24" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        class="lucide lucide-search">
+                        <path d="m21 21-4.34-4.34"/>
+                        <circle 
+                        cx="11" 
+                        cy="11" 
+                        r="8"/>
+                    </svg>
                     <label for="buscar-tareas" class="SoloLectoresPantalla">Buscar tareas</label>
-                    <input type="text" id="buscar-tareas" placeholder="Buscar tareas...">
+                    <input type="search" class="CampoFormulario" id="buscar-tareas" placeholder="Buscar tareas...">
                 </div>
                 <div class="ContenedorFiltrosTareas">
-                    <button type="button">Todos</button>
-                    <button type="button">Pendientes</button>
-                    <button type="button">Completadas</button>
+                    <button type="button" class="Boton BotonFiltroTareas BotonSeleccionado" aria-pressed="true">Todos</button>
+                    <button type="button" class="Boton BotonFiltroTareas" aria-pressed="false">Pendientes</button>
+                    <button type="button" class="Boton BotonFiltroTareas" aria-pressed="false">Completadas</button>
                 </div>
             </div>
 
+            <!-- Ejemplos estáticos para revisar los estados del diseño. -->
             <ul class="ContenedorTareas">
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
@@ -76,128 +159,306 @@
                         <label for="tarea-1">Practicar Flexbox</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite FechaHoy">Hoy</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
                         <input type="checkbox" id="tarea-2">
-                        <label for="tarea-2">Practicar Flexbox</label>
+                        <label for="tarea-2">Repasar arrays en JavaScript</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
                         <input type="checkbox" id="tarea-3">
-                        <label for="tarea-3">Practicar Flexbox</label>
+                        <label for="tarea-3">Crear el formulario de tareas</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
                         <input type="checkbox" id="tarea-4">
-                        <label for="tarea-4">Practicar Flexbox</label>
+                        <label for="tarea-4">Subir el proyecto a GitHub</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
                         <input type="checkbox" id="tarea-5">
-                        <label for="tarea-5">Practicar Flexbox</label>
+                        <label for="tarea-5">Revisar el diseño en móvil</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
-                        <input type="checkbox" id="tarea-6">
-                        <label for="tarea-6">Practicar Flexbox</label>
+                        <input type="checkbox" id="tarea-6" checked>
+                        <label for="tarea-6">Definir la estructura HTML</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
                 <li class="Tarea">
                     <div class="TareaCheckboxDescripcion">
-                        <input type="checkbox" id="tarea-7">
-                        <label for="tarea-7">Practicar Flexbox</label>
+                        <input type="checkbox" id="tarea-7" checked>
+                        <label for="tarea-7">Elegir la paleta de colores</label>
                     </div>
                     <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
+                        <p class="FechaLimite">10 Sep</p>
                     </div>
                     <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
-                    </div>
-                </li>
-                <li class="Tarea">
-                    <div class="TareaCheckboxDescripcion">
-                        <input type="checkbox" id="tarea-8">
-                        <label for="tarea-8">Practicar Flexbox</label>
-                    </div>
-                    <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
-                    </div>
-                    <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
-                    </div>
-                </li>
-                <li class="Tarea">
-                    <div class="TareaCheckboxDescripcion">
-                        <input type="checkbox" id="tarea-9">
-                        <label for="tarea-9">Practicar Flexbox</label>
-                    </div>
-                    <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
-                    </div>
-                    <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
-                    </div>
-                </li>
-                <li class="Tarea">
-                    <div class="TareaCheckboxDescripcion">
-                        <input type="checkbox" id="tarea-10">
-                        <label for="tarea-10">Practicar Flexbox</label>
-                    </div>
-                    <div class="TareaFechaLimite">
-                        <p class="fecha-limite">10 Sep</p>
-                    </div>
-                    <div class="TareaAcciones">
-                        <button type="button" aria-label="Editar tarea"><img src="" alt="SimboloEditar"></button>
-                        <button type="button" aria-label="Eliminar tarea"><img src="" alt="SimboloEliminar"></button>
+                        <button type="button" class="Boton BotonIcono" aria-label="Editar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24" 
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-pencil">
+                                <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                                <path d="m15 5 4 4"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="Boton BotonIcono BotonEliminar" aria-label="Eliminar tarea">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="24"
+                                height="24" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                class="lucide lucide-trash">
+                                <path d="M10 11v6"/>
+                                <path d="M14 11v6"/>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                                <path d="M3 6h18"/>
+                                <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                            </svg>
+                        </button>
                     </div>
                 </li>
             </ul>
