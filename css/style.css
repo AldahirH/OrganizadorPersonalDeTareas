@@ -356,6 +356,10 @@ svg {
     text-decoration: line-through;
 }
 
+.BotonCancelarEdicion[hidden] {
+    display: none;
+}
+
 .FechaLimite {
     color: var(--color-texto-secundario);
     font-size: 0.875rem;
